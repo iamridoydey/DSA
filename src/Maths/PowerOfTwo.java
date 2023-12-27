@@ -2,7 +2,7 @@ package Maths;
 
 public class PowerOfTwo {
     public static void main(String[] args) {
-        boolean isPow = isPowerOfTwo(25);
+        boolean isPow = isPowerOfTwo2(32);
         System.out.println(isPow);
     }
 
@@ -12,6 +12,11 @@ public class PowerOfTwo {
         }
         int N = bitsLength(number);
         return (number ^ (1 << (N - 1))) == 0;
+    }
+
+    public static boolean isPowerOfTwo2(int number){
+        // If the current number & previous number == 0 then it is the power of two
+        return (number & (number - 1)) == 0;
     }
 
     public static int bitsLength(int N){
