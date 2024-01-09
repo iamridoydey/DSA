@@ -52,8 +52,8 @@ public class N_Queens_problem {
 
         int leftN = Math.min(r, c);
         // Check the left diagonal
-        for (int i = 0; i < leftN; i++) {
-            if (board[r - 1][c - 1]){
+        for (int i = 1; i <= leftN; i++) {
+            if (board[r - i][c - i]){
                 return false;
             }
         }
@@ -61,8 +61,8 @@ public class N_Queens_problem {
 
         int rightN = Math.min(r, board[0].length - 1 - c);
         // Check the left diagonal
-        for (int i = 0; i < rightN; i++) {
-            if (board[r - 1][c + 1]){
+        for (int i = 1; i <= rightN; i++) {
+            if (board[r - i][c + i]){
                 return false;
             }
         }
