@@ -47,10 +47,12 @@ public class CLL {
             return;
         }
 
+        size--;
         // But if the index is equal to 0 then move the head one step further
         if (index == 0){
             head = head.next;
             tail = head;
+            return;
         }
 
         // Find the previous node
